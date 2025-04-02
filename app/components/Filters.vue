@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-end my-6">
-      <button @click="isOpen = true" class="border p-2 rounded flex items-center gap-2">
-        <span>&#9776;</span> Filtres
+      <button @click="isOpen = true" class="border p-2 rounded flex items-center gap-2 font-bold">
+        <span><img src="/images/filter.svg" alt="Horscape Logo" class="h-5"></span> Filtres
       </button>
       
       <div v-if="isOpen" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
