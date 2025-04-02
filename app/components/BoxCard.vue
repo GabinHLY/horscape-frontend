@@ -18,11 +18,13 @@
           </span>
         </div>
       </div>
-      <p class="text-sm text-gray-500">Hôte : {{ box.host || "Nom de l’hôte" }}</p>
-      <p class="text-sm text-gray-400">{{ box.dates || "Dates d’intentées disponibles" }}</p>
+      <p class="text-sm text-gray-500">Hôte : {{ box.owner_name || "Nom de l’hôte" }}</p>
+      <p class="text-sm text-gray-400">{{ box.adress || "Adresse non précisée" }}</p>
 
       <!-- Prix -->
-      <p class="font-semibold mt-1">{{ box.price ? `${box.price}€` : "0€" }} par nuit</p>
+      <p class="font-semibold mt-1">
+        {{ box.price ? `${parseFloat(box.price).toFixed(2)}€` : "0,00€" }} par nuit
+      </p>
     </div>
   </NuxtLink>
 </template>

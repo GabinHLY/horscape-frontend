@@ -20,4 +20,3 @@ useHead({
     <Footer />
   </div>
 </template>
-
