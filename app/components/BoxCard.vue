@@ -23,19 +23,17 @@
 </template>
 
 <script setup>
-defineProps({
-  box: {
-    type: Object,
-    required: true
-  }
-});
+const { box } = defineProps(['box'])
 
-// Sécurisation du formatage côté JS
 const formattedRating = computed(() => {
-  return box.rating !== undefined ? parseFloat(box.rating).toFixed(2).replace('.', ',') : "0,00";
+  return box.rating !== undefined
+    ? parseFloat(box.rating).toFixed(2).replace('.', ',')
+    : "0,00"
 });
 
 const formattedPrice = computed(() => {
-  return box.price ? `${Number(box.price).toFixed(2)}€` : "0,00€";
+  return box.price
+    ? `${Number(box.price).toFixed(2)}€`
+    : "0,00€"
 });
 </script>
