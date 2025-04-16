@@ -67,6 +67,8 @@ const { data: boxesRaw } = await useFetch(
   () => `${useRuntimeConfig().public.NUXT_PUBLIC_API_BASE}/boxes`
 );
 
+console.log('boxes', boxesRaw)
+
 const boxes = ref([]);
 if (boxesRaw.value) {
   boxes.value = boxesRaw.value;

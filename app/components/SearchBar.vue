@@ -1,12 +1,14 @@
 <template>
   <div class="w-full flex justify-center">
     <!-- Version Mobile -->
-    <div class="md:hidden">
-      <button class="flex items-center gap-2 px-4 py-2 border border-black rounded-full">
-        <span>Commencer ma recherche</span>
-        <Icon name="lucide:search" class="w-5 h-5" />
-      </button>
-    </div>
+    <ClientOnly>
+      <div class="md:hidden">
+        <button class="flex items-center gap-2 px-4 py-2 border border-black rounded-full">
+          <span>Commencer ma recherche</span>
+          <Icon name="lucide:search" class="w-5 h-5" />
+        </button>
+      </div>
+    </ClientOnly>
 
     <!-- Version Desktop -->
     <div

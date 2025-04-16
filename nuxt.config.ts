@@ -5,12 +5,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+
   future: {
     compatibilityVersion: 4,
   },
 
   css: ['~/assets/css/main.css'],
-  
+
   vite: {
     plugins: [
       tailwindcss(),
@@ -19,8 +20,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      NUXT_PUBLIC_API_BASE: process.env.NUXT_PUBLIC_API_BASE
+      NUXT_PUBLIC_API_BASE: "https://api.horscape.gabinduboc.fr/api"
     }
   },
-  
+
+  modules: ["nuxt-delay-hydration", "@nuxt/icon"],
 })
