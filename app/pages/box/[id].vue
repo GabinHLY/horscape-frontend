@@ -75,10 +75,11 @@
       <div class="mt-8 mb-6">
         <h2 class="font-semibold mb-4 text-gray-900 text-lg">Ce que propose ce box</h2>
         <ul class="grid grid-cols-2 gap-6 text-sm text-gray-700">
-        <li v-for="i in 6" :key="i" class="flex items-center gap-2 py-2">
-          <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
-          Blablabla
-        </li>
+          <li v-for="(item, i) in boxFeatures" :key="i" class="flex items-center gap-2 py-2">
+            <div class="w-2.5 h-2.5 bg-black rounded-full"></div>
+            {{ item }}
+          </li>
+
         </ul>
       </div>
       </div>
@@ -192,6 +193,16 @@ const nights = computed(() => {
 const total = computed(() => {
   return box.value ? (nights.value * parseFloat(box.value.price)).toFixed(2) : '0.00';
 });
+
+const boxFeatures = [
+  "Pension en parc individuel",
+  "Accès direct à la forêt pour randonnées",
+  "Surveillance quotidienne des chevaux",
+  "Foin et eau à volonté",
+  "Boxes paillés tous les jours",
+  "Sellerie sécurisée pour le matériel"
+];
+
 </script>
 
 <style scoped>
